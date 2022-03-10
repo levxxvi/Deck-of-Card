@@ -1,3 +1,3 @@
 public enum Suites {
-    SPADES, HEARTS, CLOVERS, DIAMOND
+    SPADES, HEARTS, CLOVERS, DIAMONDS
 }
