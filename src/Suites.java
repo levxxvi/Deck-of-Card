@@ -1,3 +1,14 @@
 public enum Suites {
-    SPADES, HEARTS, CLOVERS, DIAMONDS
+    SPADES("Spades"),
+    HEARTS("Hearts"),
+    CLOVERS("Clovers"),
+    DIAMONDS("Diamonds");
+
+    private final String SUITNAME;
+    Suites(String suit){
+        this.SUITNAME = suit;
+    }
+    public String getSuit(){
+        return this.SUITNAME;
+    }
 }
