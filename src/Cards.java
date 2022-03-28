@@ -9,5 +9,8 @@ public class Cards {
         this.suit = suit;
     }
 
-    ArrayList<Cards> cards = new ArrayList<>();
+    ArrayList<Cards> cardsList = new ArrayList<>();
+    for(int i = 0; i < 52; i++){
+        cardsList.add((Math.random() * 10 + 1), Suites);
+    }
 }
