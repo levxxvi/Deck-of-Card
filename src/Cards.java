@@ -6,7 +6,6 @@ public class Cards {
         this.num = num;
         this.suit = suit;
     }*/
-
     Num num;
     Suites suit;
 
