@@ -1,16 +1,17 @@
-import java.util.ArrayList;
-
 public class Cards {
-    int num;
-    Suites suit;
+    /*String num;
+    String suit;
 
-    public Cards(int num, Suites suit){
+    public Cards(String num, String suit){
         this.num = num;
         this.suit = suit;
-    }
+    }*/
 
-    ArrayList<Cards> cardsList = new ArrayList<>();
-    for(int i = 0; i < 52; i++){
-        cardsList.add((Math.random() * 10 + 1), Suites);
+    Num num;
+    Suites suit;
+
+    public Cards(Num num, Suites suit){
+        this.num = num;
+        this.suit = suit;
     }
 }

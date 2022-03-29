@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Random;
 
 public class Main {
     /*
@@ -9,9 +10,21 @@ public class Main {
         hand creator
      */
     public static void main(String[] args) {
+        /*String randomNum = Num.getRandomNum();
+        String randomSuit = Suites.getRandomSuit();
+
         ArrayList<Cards> cardsList = new ArrayList<>();
         for(int i = 0; i < 52; i++){
-            cardsList.add((Math.random() * 10 + 1), Suites);
+            cardsList.add(randomNum, randomSuit);
+        }*/
+        new Num num;
+
+        Num randomNum = Num.getRandomNum();
+        Suites randomSuit = Suites.getRandomSuit();
+
+        ArrayList<Cards> cardsList = new ArrayList<>();
+        for(int i = 0; i < 52; i++){
+            cardsList.add(randomNum, randomSuit);
         }
         Iterator<Cards> iterator = cardsList.iterator();
         while (iterator.hasNext()){
