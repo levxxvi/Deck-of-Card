@@ -8,44 +8,27 @@ public class Main {
         hand creator
      */
     public static void main(String[] args) {
-        /*String randomNum = Num.getRandomNum();
-        String randomSuit = Suites.getRandomSuit();
-
-        ArrayList<Cards> cardsList = new ArrayList<>();
-        for(int i = 0; i < 52; i++){
-            cardsList.add(randomNum, randomSuit);
-        }
-
-        Num randomNum = Num.getRandomNum();
-        Suites randomSuit = Suites.getRandomSuit();
-
-        System.out.println(randomSuit);
-        System.out.println(randomNum);*/
         LinkedList<Cards> cardsList = new LinkedList<>();
 
         createDeck(cardsList);
-        /*Cards cards = new Cards(Num.ACE, Suites.SPADES);
-        System.out.println(cards.num.getNum() + " of " + cards.suit.getSuit());
-        System.out.println(cardsList.get(0));*/
-
         for(int i = 0; i < 52; i++){
             Cards cards = cardsList.get(i);
             System.out.println(cards.num.getNum() + " of " + cards.suit.getSuit());
         }
 
-
-        /*Collections.shuffle(cardsList);
+        Collections.shuffle(cardsList);
 
         ArrayList<Cards> hand = new ArrayList<>(5);
         for (int i = 0; i < 5; i++) {
             hand.add(cardsList.pollLast());
-            System.out.println(hand.get(i));
+            //System.out.println(hand.get(i));
         }
-        Iterator<Cards> iterator = cardsList.iterator();
+        Iterator<Cards> iterator = hand.iterator();
+        System.out.println("This is your hand!");
         while (iterator.hasNext()){
             Cards cards = iterator.next();
-            System.out.println(cards);
-        }*/
+            System.out.println(cards.num.getNum() + " of " + cards.suit.getSuit());
+        }
     }
 
     private static void createDeck(LinkedList<Cards> cardsList) {
