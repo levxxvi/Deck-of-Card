@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public enum Suites {
     SPADES("Spades"),
     HEARTS("Hearts"),
@@ -12,10 +10,5 @@ public enum Suites {
     }
     public String getSuit(){
         return this.SUITNAME;
-    }
-
-    public static Suites getRandomSuit() {
-        Random random = new Random();
-        return values()[random.nextInt(values().length)];
     }
 }

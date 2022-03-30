@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public enum Num {
     ACE("Ace"),
     KING("King"),
@@ -21,10 +19,5 @@ public enum Num {
     }
     public String getNum(){
         return this.NUMNAME;
-    }
-
-    public static Num getRandomNum() {
-        Random random = new Random();
-        return values()[random.nextInt(values().length)];
     }
 }
