@@ -21,7 +21,6 @@ public class Main {
         ArrayList<Cards> hand = new ArrayList<>(5);
         for (int i = 0; i < 5; i++) {
             hand.add(cardsList.pollLast());
-            //System.out.println(hand.get(i));
         }
         Iterator<Cards> iterator = hand.iterator();
         System.out.println("This is your hand!");
