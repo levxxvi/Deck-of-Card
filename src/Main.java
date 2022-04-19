@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Collections;
 
 public class Main {
     /*
@@ -23,11 +24,25 @@ public class Main {
             hand.add(cardsList.pollLast());
         }
         Iterator<Cards> iterator = hand.iterator();
-        System.out.println("This is your hand!");
+        System.out.println("**********This is your hand!**********");
         while (iterator.hasNext()){
             Cards cards = iterator.next();
             System.out.println(cards.num.getNum() + " of " + cards.suit.getSuit());
         }
+        Collections.sort(hand);
+
+        System.out.println("**********Sort by Suit**************");
+        for(Cards card : hand){
+            System.out.println(card.num.getNum() + " of " + card.suit.getSuit());
+        }
+
+        CustomComparator c = new CustomComparator();
+        Collections.sort(hand, c);
+        System.out.println("**********Sort by Num**************");
+        for(Cards card : hand){
+            System.out.println(card.num.getNum() + " of " + card.suit.getSuit());
+        }
+
     }
 
     private static void createDeck(LinkedList<Cards> cardsList) {
